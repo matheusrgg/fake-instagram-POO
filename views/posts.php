@@ -27,7 +27,7 @@
             </div>
         </div>
     <?php endforeach; ?>
-        <a class="float-button" href="/fake-instagram/formulario-post">&#10010;</a>
+        <a class="float-button" href="/fake-instagram-poo/formulario-post">&#10010;</a>
     </main>
    
     

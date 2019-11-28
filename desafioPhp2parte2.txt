@@ -1,0 +1,24 @@
+desaio php 2 parte 2:
+
+
+primeira coisa tenho que ver se o formulario ta conectado com o resto da parada,
+vejo isso vendo o name que dei pra cada input , mais conecta com aonde?
+que no caso ta 
+name="img"
+name="uname"
+name="senha"
+
+e esse button submit , não devia ter algo dentro mandando ?
+Olhando aqui nesse link acho que esse submit é assim mesmo,
+https://www.studentstutorial.com/php/mvc/mvc-signup-user.php
+
+olhar scripts antigo? quais
+
+
+aquele de curso online , que até fizemos um lance com session valido
+
+aqui no cadastroController,criando a função
+
+cadastrarUsuario
+
+a $image ao invés de $_POST não deveria ser $_FILES ??

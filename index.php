@@ -22,4 +22,19 @@
             $controller->acao($rotas);
         break;
 
+
+        /*----- case Cadastro do Usuario para Banco de Dados --- */
+
+        case "cadastro-usuarioDB":
+            include "controllers/PostController.php";
+            $controller = new CadastroController();
+            $controller->acao($rotas);
+        break;
+
+        
+        case "cadastro-usuarioView":
+            include "controllers/PostController.php";
+            $controller = new PostController();
+            $controller->acao($rotas);
+        break;
     }
