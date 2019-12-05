@@ -22,3 +22,23 @@ aqui no cadastroController,criando a função
 cadastrarUsuario
 
 a $image ao invés de $_POST não deveria ser $_FILES ??
+
+arrumei algumas sintaxes e entendi umas logicas com a Nat
+
+
+
+Só que quando carrego a página manda da OBJETO NÃO ENCONTRADO e notei
+que na URL fake-instagram-poo/cadastro-usuarioDB
+
+Tá com erro na rota no arquivo index.php o cadastro-usuarioDB o controller
+tava indo pro PostController e não CadastroController..
+
+daora ao invés da tela fica branca agora , vem
+
+tinha dado um var_dump($_POST)
+
+Fatal error: Uncaught Error: Class 'CadastroController' not found in C:\xampp\htdocs\fake-instagram-POO\index.php:30 Stack trace: #0 {main} thrown in C:\xampp\htdocs\fake-instagram-POO\index.php on line 30
+
+arrumei a rota certinho no index 
+depois apareceu um erro , de sintaxe eu não tava fechando a classe
+

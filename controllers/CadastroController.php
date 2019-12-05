@@ -18,22 +18,31 @@ class CadastroController {
         case "cadastro-usuarioView":
             $this->viewFormularioCadastro();
         break;
+        }
     }
-}
 
 
 /*------- funcoes de cadastro -------*/
 
-private fucntion viewFormularioCadastro(){
+private function viewFormularioCadastro(){
         include "views/cadastrarUsuario.php";
 
 }
 
 private function cadastrarUsuario(){
 
-    var_dump($_POST);
-    exit;
-    $imagem= $_FILES['img'];
+    // var_dump($_FILES);
+    // exit;
+    $imagem= $_FILES['img']['name'];
+    $linkTemp=$_FILES['img']['tmp_name'];
+    
+    $caminhoSalvo='views/img/'.$imagem;
+    
+    $deucerto= move_uploaded_file($linkTemp, $caminhoSalvo);
+
+    // var_dump($deucerto);
+    // exit;
+
     $nome= $_POST['uname'];
     $senha = password_hash ($_POST['senha'], PASSWORD_DEFAULT);
 
@@ -48,8 +57,10 @@ private function cadastrarUsuario(){
 
     }else{
 
-        echo "deu errado meu BROTHERRERR"
+        echo "deu errado meu BROTHERRERR";
 
     }
 
+    }
 }
+

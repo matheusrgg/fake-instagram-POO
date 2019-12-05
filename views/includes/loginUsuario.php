@@ -92,7 +92,7 @@ span.psw {
 
 <h2>Login de Usuário</h2>
 
-<form action="cadastro-usuarioDB" method="post">
+<form action="/fake-instagram-poo/login-usuarioValidacao" method="post">
 
 <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -104,10 +104,10 @@ span.psw {
     
 
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="nameUsuario" required>
+    <input type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="senhaUsuario" required>
+    <input type="password" placeholder="Enter Password" name="senha" required>
         
     <button type="submit">Login</button>
     <label>

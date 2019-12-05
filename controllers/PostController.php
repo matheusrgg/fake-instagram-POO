@@ -1,4 +1,6 @@
 <?php 
+
+session_start();
 include_once "models/Post.php";
 
 class PostController {
@@ -44,7 +46,12 @@ class PostController {
         $linkTemp = $_FILES['img']['tmp_name'];
         $caminhoSalvar = "views/img/$nomeArquivo";
         move_uploaded_file($linkTemp, $caminhoSalvar);
-        $resultado = $post->criarPost($caminhoSalvar, $descricao);
+
+        $idUsuario = $_SESSION['newsession'][0]['id'];
+        // var_dump($idUsuario);
+        // exit;
+
+        $resultado = $post->criarPost($caminhoSalvar, $descricao, $idUsuario);
         if($resultado){
             header('Location:/fake-instagram-POO/posts');
         }else {
@@ -55,6 +62,8 @@ class PostController {
     private function listarPosts(){
         $post = new Post();
         $listaPosts = $post->listarPosts();
+        // var_dump($listaPosts);
+        // exit;
         $_REQUEST['posts'] = $listaPosts;
         $this->viewPosts();
     }
