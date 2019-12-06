@@ -15,10 +15,14 @@ class LoginController {
             case "login-usuarioValidacao":
                 $this->loginValidacao();
             break;
-        }
+        
+
+            case "logout";
+            $this->logout();
+            break;
     }
 
-
+}
     private function loginUsuario(){
         include "loginUsuario.php";
     }
@@ -57,7 +61,7 @@ class LoginController {
     private function logout() {
         session_start();
         session_destroy();
-        header('Location:login');
+        header('Location:fake-instagram-POO/posts');
     }
 
 

@@ -6,7 +6,7 @@
        <!-- <p><?php //var_dump($_SESSION['newsession'])?> </p> --->
 
         <p><?php echo $_SESSION['newsession']['0']['nome'] ?> </p>
-        <a href="/fake-instagram-poo/controller/LoginController.php/login">Sair</a>
+        <a href="/fake-instagram-poo/views/includes/loginUsuario.php">Sair</a>
 
         
 </header>

@@ -53,4 +53,10 @@
              $controller->acao($rotas);
          break;
 
+         case "logout";
+         include "controllers/LoginController.php";
+             $controller = new LoginController();
+             $controller->acao($rotas);
+         break;
+
         }
