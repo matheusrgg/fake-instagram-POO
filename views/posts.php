@@ -1,6 +1,7 @@
 <?php 
 
-    $posts = $_REQUEST['posts'];
+
+$posts = $_REQUEST['posts'];
 
 ?>
 <!DOCTYPE html>

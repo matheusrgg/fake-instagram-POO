@@ -31,7 +31,10 @@ class PostController {
     /*------- funcoes do post -------*/
 
     private function viewFormularioPost(){
+        if(isset($_SESSION['newsession'])){
         include "views/newPost.php";
+        }
+        echo 'Você precisa se logar';
     }
 
     private function viewPosts(){

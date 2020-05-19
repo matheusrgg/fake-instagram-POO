@@ -1,5 +1,7 @@
 <?php
+
 session_start();
+
 include_once "models/Login.php";
 
 
@@ -24,7 +26,7 @@ class LoginController {
 
 }
     private function loginUsuario(){
-        include "loginUsuario.php";
+        include "views/includes/loginUsuario.php";
     }
 
     private function loginValidacao (){
@@ -43,7 +45,7 @@ class LoginController {
 
         if($userok){
         
-           //newsession é uma associação (é um array) , guardando os dados do usuário e sempre que quiser , vc acessa a session como se fosse uma array. 
+        //newsession é uma associação (é um array) , guardando os dados do usuário e sempre que quiser , vc acessa a session como se fosse uma array. 
         
         $_SESSION["newsession"]=$resultado;
 

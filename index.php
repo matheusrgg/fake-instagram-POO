@@ -34,7 +34,7 @@
         
         case "cadastro-usuarioView":
             include "controllers/CadastroController.php";
-            $controller = new CadastrarController();
+            $controller = new CadastroController();
             $controller->acao($rotas);
         break;
     

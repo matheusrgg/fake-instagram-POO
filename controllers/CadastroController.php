@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include_once "models/User.php";
 
 class CadastroController {
@@ -9,7 +11,6 @@ class CadastroController {
         switch($rotas){
             
             case "cadastro-usuarioDB":
-
                 //se for auqela rota executa essa função
                 $this->cadastrarUsuario();
             break;
@@ -25,7 +26,7 @@ class CadastroController {
 /*------- funcoes de cadastro -------*/
 
 private function viewFormularioCadastro(){
-        include "views/cadastrarUsuario.php";
+        include "views/includes/cadastrarUsuario.php";
 
 }
 
@@ -35,7 +36,6 @@ private function cadastrarUsuario(){
     // exit;
     $imagem= $_FILES['img']['name'];
     $linkTemp=$_FILES['img']['tmp_name'];
-    
     $caminhoSalvo='views/img/'.$imagem;
     
     $deucerto= move_uploaded_file($linkTemp, $caminhoSalvo);
@@ -52,6 +52,7 @@ private function cadastrarUsuario(){
     /*--- objeto $user de Model , classe user() */
     $user = new User();
     $resultado = $user -> criarUsuario ($imagem ,$nome, $senha );
+
     if($resultado){
         header('Location:/fake-instagram-POO/posts');
 

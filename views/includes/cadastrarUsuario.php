@@ -83,7 +83,8 @@ span.psw {
 
 <body>
     
-   <?php include "views/includes/header.php"; ?> 
+   <?php include "header.php"; ?> 
+   
 
     <h2>Cadastro de Usuario</h2>
 
